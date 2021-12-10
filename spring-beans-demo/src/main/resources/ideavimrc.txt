@@ -1,0 +1,88 @@
+:set keep-english-in-normal
+:set keep-english-in-normal-and-restore-in-insert
+set number
+set incsearch
+set hlsearcf
+set nohlsearch
+
+set showmode
+syntax on
+set smartcode
+set cursorline
+set cursorcolumn
+set ruler
+set laststatus=2
+" 将tab替换为相应数量的空格
+set expandtab
+
+set tabstop=2
+
+set shiftwidth=4
+
+set history=2000
+
+set nobackup
+set noswapfile
+
+let mapleader=' '
+
+" 退出、保存关闭"
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :qa!<CR>
+
+" redo
+nnoremap U <C-r>
+
+" debug run
+nnoremap <Leader>dr :action ChooseDebugConfiguration<CR>
+
+" run
+nnoremap <Leader>rr :action ChooseRunConfiguration<CR>
+
+" 跳转到实体类
+nnoremap <Leader>gc :action GotoClass<CR>
+
+" 跳转到声明
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+
+" 查看断点
+nnoremap <Leader>vb :action ViewBreakpoint<CR>
+
+" 跳到实现类
+nnoremap <Leader>gi :action GotoImplementation<CR>
+
+" 跳转到文件
+nnoremap <Leader>gf :action GotoFile<CR>
+
+" 跳转Action
+nnoremap <Leader>ga :action GotoAction<CR>
+
+" 跳到测试类，没有自动创建
+nnoremap <Leader>gt :action GotoTest<CR>
+
+" 注释
+nnoremap <Leader>cc :action CommentByLineComment<CR>
+
+" 优化导包
+nnoremap <Leader>oi :action OptimizeImports<CR>
+
+" run
+nnoremap <Leader>ar :action Run<CR>
+
+" debug
+nnoremap <Leader>ad :action Debug<CR>
+
+" 重命名 视图？
+nnoremap <Leader>rnv :action ChangesView.Rename<CR>
+
+" 重命名 文件
+nnoremap <Leader>rf :action RenameFile<CR>
+
+" 重命名 变量、类名
+nnoremap <Leader>rn :action RenameFile<CR>
+
+" 复制class 引用
+nnoremap <Leader>cr :action CopyReference<CR>
+
+" 抽取方法
+nnoremap <Leader>em :action ExtractMethod<CR>
