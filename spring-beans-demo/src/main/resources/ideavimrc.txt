@@ -79,7 +79,7 @@ nnoremap <Leader>rnv :action ChangesView.Rename<CR>
 nnoremap <Leader>rf :action RenameFile<CR>
 
 " 重命名 变量、类名
-nnoremap <Leader>rn :action RenameFile<CR>
+nnoremap <Leader>nn :action RenameElement<CR>
 
 " 复制class 引用
 nnoremap <Leader>cr :action CopyReference<CR>
@@ -87,4 +87,5 @@ nnoremap <Leader>cr :action CopyReference<CR>
 " 抽取方法
 nnoremap <Leader>em :action ExtractMethod<CR>
 
-" 我就是改一下
+" 格式化代码
+nnoremap <Leader>ff :action ReformatCode<CR>
