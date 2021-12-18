@@ -97,3 +97,8 @@ nnoremap <Leader>nE :action GotoNextError<CR>
 
 " 展示tab页面
 nnoremap <Leader>T :action Switcher<CR>
+
+set NERDTree
+" NERDTree config
+nnoremap <leader>T :NERDTreeToggle<CR>
+nnoremap <leader>tf :NERDTreeFocus<CR>
