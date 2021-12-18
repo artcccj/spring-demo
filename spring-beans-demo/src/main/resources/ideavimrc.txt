@@ -1,104 +1,94 @@
-:set keep-english-in-normal
-:set keep-english-in-normal-and-restore-in-insert
-set nu
-set relativenumber
-
-syntax on
-
-set laststatus=4
-" 将tab替换为相应数量的空格
-set expandtab
-
-set tabstop=4
-
-set shiftwidth=4
-
-set history=2000
-
-set nobackup
-set noswapfile
-
-let mapleader=' '
-
-" 退出、保存关闭"
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>Q :qa!<CR>
-
-" redo
-nnoremap U <C-r>
-
-" 跳转到实体类
-nnoremap <Leader>c :action GotoClass<CR>
-
-" 跳转到声明
-nnoremap <Leader>d :action GotoDeclaration<CR>
-
-" 查看断点
-nnoremap <Leader>b :action ViewBreakpoints<CR>
-
-" 跳到实现类
-nnoremap <Leader>i :action GotoImplementation<CR>
-
-" 跳转到文件
-nnoremap <Leader>f :action GotoFile<CR>
-
-" 跳转Action
-nnoremap <Leader>a :action GotoAction<CR>
-
-" 跳到测试类，没有自动创建
-nnoremap <Leader>t :action GotoTest<CR>
-
-" 注释
-nnoremap <Leader>/ :action CommentByLineComment<CR>
-
-" 优化导包
-nnoremap <Leader>O :action OptimizeImports<CR>
-
-" run
-nnoremap <Leader>R :action Run<CR>
-
-" debug
-nnoremap <Leader>D :action Debug<CR>
-
-" 重命名 文件
-nnoremap <Leader>N :action RenameFile<CR>
-" 重命名 变量、类名
-nnoremap <Leader>N :action RenameElement<CR>
-
-" 复制class 引用
-nnoremap <Leader>cr :action CopyReference<CR>
-
-" 抽取方法
-nnoremap <Leader>M :action ExtractMethod<CR>
-
-" 格式化代码
-nnoremap <Leader>F :action ReformatCode<CR>
-
-" 展示类继承关系
-nnoremap <Leader>H :action TypeHierarchy<CR>
-
-" 实现方法
-nnoremap <Leader>m :action ImplementMethods<CR>
-
-" 覆盖方法
-nnoremap <Leader>o :action OverrideMethods<CR>
-
-" 上一个tab
-nnoremap <Leader>h :action PreviousTab<CR>
-
-" 下一个tab
-nnoremap <Leader>l :action NextTab<CR>
-
-" 展示错误信息
-nnoremap <Leader>E :action ShowErrorDescription<CR>
-
-" 展示错误信息
-nnoremap <Leader>nE :action GotoNextError<CR>
-
-" 展示tab页面
-nnoremap <Leader>T :action Switcher<CR>
-
-set NERDTree
-" NERDTree config
-nnoremap <leader>T :NERDTreeToggle<CR>
-nnoremap <leader>tf :NERDTreeFocus<CR>
+Last login: Fri Dec 17 16:18:20 on ttys003
+rm='trash -F'
+ xmly@cswdeMacBook-Pro  ~  ls
+Applications
+ApprovalRuleConfigControllerTest_testQueryByDefinitionId_2021_05_26_182016.jfr
+Desktop
+Documents
+Downloads
+Fiddler2
+Library
+Movies
+Music
+Pictures
+Postman
+Public
+RedisClient
+Sites
+Sunlogin Files
+approval_engine
+c-workspace
+camunda
+camunda-mobile.log.2021-12-13-185
+camunda-mobile.log.2021-12-13-27
+data
+demo
+dev-kits
+docker
+error.log
+fonts
+front-workspace
+go
+java_error_in_idea.hprof
+learn
+node-workspace
+open
+oradiag_xmly
+plugins
+py-work
+sensors
+server
+software
+tcp-work
+temp
+ttf
+upload-files
+workflow-web.log
+workspace
+ xmly@cswdeMacBook-Pro  ~  vim .idea
+ xmly@cswdeMacBook-Pro  ~ 
+ .ideavimrc+                                                                                                    buffers
+  1 :set keep-english-in-normal
+  2 :set keep-english-in-normal-and-restore-in-insert
+  3 set nu
+  4 set relativenumber
+  5
+  6 syntax on
+  7
+  8 set laststatus=4
+  9 " 将tab替换为相应数量的空格
+ 10 set expandtab
+ 11
+ 12 set tabstop=4
+ 13
+ 14 set shiftwidth=4
+ 15
+ 16 set history=2000
+ 17
+ 18 set nobackup
+ 19 set noswapfile
+ 20
+ 21 let mapleader=' '
+ 22
+ 23 " 退出、保存关闭"
+ 24 nnoremap <Leader>q :q<CR>
+ 25 nnoremap <Leader>Q :qa!<CR>
+ 26
+ 27 " redo
+ 28 nnoremap U <C-r>
+ 29
+ 30 " 跳转到实体类
+ 31 nnoremap <Leader>c :action GotoClass<CR>
+ 32
+ 33 " 跳转到声明
+ 34 nnoremap <Leader>d :action GotoDeclaration<CR>
+ 35
+ 36 " 查看断点
+ 37 nnoremap <Leader>b :action ViewBreakpoints<CR>
+ 38
+ 39 " 跳到实现类
+ 40 nnoremap <Leader>i :action GotoImplementation<CR>
+ 41
+ 42 " 跳转到文件
+ 43 nnoremap <Leader>f :action GotoFile<CR>
+ NORMAL  .ideavimrc[+]                                                              vim  utf-8[unix]  10% ㏑:11/104☰℅:1
