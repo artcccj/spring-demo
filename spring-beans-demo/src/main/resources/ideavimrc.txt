@@ -100,5 +100,6 @@ nnoremap <Leader><leader> :action Switcher<CR>
 
 set NERDTree
 " NERDTree config
-nnoremap <leader>T :NERDTreeToggle<CR>
-nnoremap <leader>tf :NERDTreeFocus<CR>
+nnoremap tt :NERDTreeToggle<CR>
+nnoremap tf :NERDTreeFocus<CR>
+nnoremap tc :NERDTreeClose<CR>
