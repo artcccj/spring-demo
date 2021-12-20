@@ -20,36 +20,32 @@ set noswapfile
 
 let mapleader=' '
 
-" 退出、保存关闭"
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>Q :qa!<CR>
-
 " redo
 nnoremap U <C-r>
 
 " 跳转到实体类
-nnoremap <Leader>c :action GotoClass<CR>
+nnoremap <Leader>gc :action GotoClass<CR>
 
 " 跳转到声明
-nnoremap <Leader>d :action GotoDeclaration<CR>
+nnoremap <Leader>gd :action GotoDeclaration<CR>
 
 " 查看断点
-nnoremap <Leader>b :action ViewBreakpoints<CR>
+nnoremap <Leader>gb :action ViewBreakpoints<CR>
 
 " 跳到实现类
-nnoremap <Leader>i :action GotoImplementation<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
 
 " 跳转到文件
-nnoremap <Leader>f :action GotoFile<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
 
 " 跳转Action
-nnoremap <Leader>a :action GotoAction<CR>
+nnoremap <Leader>ga :action GotoAction<CR>
 
 " 跳到测试类，没有自动创建
 nnoremap <Leader>gt :action GotoTest<CR>
 
 " 注释
-nnoremap <Leader>/ :ation CommentByLineComment<CR>
+nnoremap <Leader>/ :action CommentByLineComment<CR>
 
 " 优化导包
 nnoremap <Leader>O :action OptimizeImports<CR>
@@ -78,10 +74,10 @@ nnoremap <Leader>F :action ReformatCode<CR>
 nnoremap <Leader>H :action TypeHierarchy<CR>
 
 " 实现方法
-nnoremap <Leader>m :action ImplementMethods<CR>
+nnoremap <Leader>im :action ImplementMethods<CR>
 
 " 覆盖方法
-nnoremap <Leader>o :action OverrideMethods<CR>
+nnoremap <Leader>om :action OverrideMethods<CR>
 
 " 上一个tab
 nnoremap <Leader>h :action PreviousTab<CR>
@@ -94,9 +90,6 @@ nnoremap <Leader>e :action ShowErrorDescription<CR>
 
 " 展示错误信息
 nnoremap <Leader>ne :action GotoNextError<CR>
-
-" 展示tab页面
-nnoremap <Leader><leader> :action Switcher<CR>
 
 set NERDTree
 " NERDTree config
