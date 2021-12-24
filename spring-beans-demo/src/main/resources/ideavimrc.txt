@@ -6,12 +6,15 @@ set relativenumber
 syntax on
 
 set laststatus=4
+
 " 将tab替换为相应数量的空格
 set expandtab
 
-set tabstop=4
+" 使用系统剪切板
+set clipboard+=unnamedplus
 
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 set history=2000
 
@@ -20,32 +23,42 @@ set noswapfile
 
 let mapleader=' '
 
+" 可视模式下删除不剪切
+xnoremap <leader>d "_d
+
+
 " redo
 nnoremap U <C-r>
 
+" 跳转相关配置
 " 跳转到实体类
-nnoremap <Leader>gc :action GotoClass<CR>
+nnoremap gc :action GotoClass<CR>
 
 " 跳转到声明
-nnoremap <Leader>gd :action GotoDeclaration<CR>
+nnoremap gd :action GotoDeclaration<CR>
 
-" 查看断点
-nnoremap <Leader>gb :action ViewBreakpoints<CR>
+" 跳转到父类方法
+nnoremap gu :action GotoSuperMethod<CR>
 
 " 跳到实现类
-nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap gi :action GotoImplementation<CR>
 
 " 跳转到文件
-nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap gf :action GotoFile<CR>
 
 " 跳转Action
-nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap ga :action GotoAction<CR>
 
 " 跳到测试类，没有自动创建
-nnoremap <Leader>gt :action GotoTest<CR>
+nnoremap gt :action GotoTest<CR>
 
-" 注释
-nnoremap <Leader>/ :action CommentByLineComment<CR>
+" 显示文件结构
+nnoremap <leader>M :action FileStructurePopup<CR>
+
+" 跳转相关配置
+
+" 注释 与 vim 注释快捷键保持一致
+nnoremap <Leader>cc :ation CommentByLineComment<CR>
 
 " 优化导包
 nnoremap <Leader>O :action OptimizeImports<CR>
@@ -61,11 +74,8 @@ nnoremap <Leader>rf :action RenameFile<CR>
 " 重命名 变量、类名
 nnoremap <Leader>re :action RenameElement<CR>
 
-" 复制class 引用
-nnoremap <Leader>cr :action CopyReference<CR>
-
 " 抽取方法
-nnoremap <Leader>M :action ExtractMethod<CR>
+nnoremap <Leader>em :action ExtractMethod<CR>
 
 " 格式化代码
 nnoremap <Leader>F :action ReformatCode<CR>
@@ -91,8 +101,13 @@ nnoremap <Leader>e :action ShowErrorDescription<CR>
 " 展示错误信息
 nnoremap <Leader>ne :action GotoNextError<CR>
 
+" 关闭项目
+nnoremap <leader>cp :action CloseProject<CR>
+" 关闭当前编辑器
+nnoremap <leader>C :action CloseContent<CR>
+
 set NERDTree
 " NERDTree config
 nnoremap tt :NERDTreeToggle<CR>
-nnoremap tf :NERDTreeFocus<CR>
 nnoremap tc :NERDTreeClose<CR>
+nnoremap tf :NERDTreeFocus<CR>
