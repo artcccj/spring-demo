@@ -13,6 +13,8 @@ set expandtab
 " 使用系统剪切板
 set clipboard+=unnamedplus
 
+set autoindent              " indent a new line the same amount as the line just typed
+
 set tabstop=2
 set shiftwidth=2
 
@@ -103,6 +105,7 @@ nnoremap <Leader>ne :action GotoNextError<CR>
 
 nnoremap <leader>cp :action CloseProject<CR>
 nnoremap <leader>C :action CloseContent<CR>
+nnoremap <leader><leader> :action Switcher<CR>
 
 set NERDTree
 " NERDTree config
@@ -112,3 +115,5 @@ nnoremap tf :NERDTreeFocus<CR>
 
 " 设置新工程打开方式为新开窗口
 " GotoAction Registry 去掉 ide.mac.bigsur.window.with.tabs.enabled
+" 快捷操作
+" <C-n> next <C-p> previous
