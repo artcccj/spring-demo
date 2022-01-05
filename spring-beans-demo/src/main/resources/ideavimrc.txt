@@ -11,7 +11,7 @@ set laststatus=4
 set expandtab
 
 " 使用系统剪切板
-set clipboard+=unnamedplus
+set clipboard=unnamed
 
 set autoindent              " indent a new line the same amount as the line just typed
 
@@ -24,6 +24,9 @@ set nobackup
 set noswapfile
 
 let mapleader=' '
+
+" 光标下加入空行
+nnoremap <CR> o<Esc>k
 
 " 可视模式下删除不剪切
 xnoremap <leader>d "_d
@@ -61,6 +64,7 @@ nnoremap <leader>M :action FileStructurePopup<CR>
 
 " 注释 与 vim 注释快捷键保持一致
 nnoremap <Leader>cc :action CommentByLineComment<CR>
+nnoremap <Leader>cb :action CommentByBlockComment<CR>
 
 " 优化导包
 nnoremap <Leader>O :action OptimizeImports<CR>
