@@ -1,0 +1,6 @@
+spring:
+  redis:
+    host: 192.168.3.220
+    port: 6379
+    database: 8
+    password: jredis123456

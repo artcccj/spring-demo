@@ -9,6 +9,8 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>spring-beans-demo</module>
+    <module>spring-redis-demo</module>
+    <module>spring-web-demo</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -25,6 +27,18 @@
         <version>2.2.2.RELEASE</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>30.0-jre</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.76</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
